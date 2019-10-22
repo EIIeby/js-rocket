@@ -1,3 +1,4 @@
+/*
 var carObject = {
   make: "Seat",
   type: "Leon",
@@ -11,9 +12,37 @@ var carObject = {
     alert("Car is turned on");
   }
 };
+*/
 
-function whatIsMyFavColor() {
-  return testObject.favColors[1];
+var timer = null;
+var countDownNumber = 10;
+
+function changeState(state) {
+  document.body.className = "body-state" + state;
+  clearInterval(timer);
+  countDownNumber = 10;
+  document.getElementById("countdown").innerHTML = countDownNumber;
+
+  if (state == 2) {
+    timer = setInterval(function() {
+      countDownNumber = countDownNumber - 1;
+      document.getElementById("countdown").innerHTML = countDownNumber;
+
+      if (countDownNumber <= 0) {
+        changeState(3);
+      }
+    }, 500);
+    //document.getElementById("countdown").innerHTML = 9;
+  } else if (state == 3) {
+    var succes = setTimeout(function() {
+      var randomNumber = Math.round(Math.random() * 10);
+      console.log("Random Number: " + randomNumber);
+
+      if (randomNumber > 5) {
+        changeState(4);
+      } else {
+        changeState(5);
+      }
+    }, 2000);
+  }
 }
-
-console.log(whatIsMyFavColor());
