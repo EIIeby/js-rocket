@@ -28,10 +28,18 @@ function changeState(state) {
       countDownNumber = countDownNumber - 1;
       document.getElementById("countdown").innerHTML = countDownNumber;
 
+      if (countDownNumber == 5) {
+        //nerveous
+      }
+
+      if (countDownNumber == 2) {
+        //excited
+      }
+
       if (countDownNumber <= 0) {
         changeState(3);
       }
-    }, 500);
+    }, 1000);
     //document.getElementById("countdown").innerHTML = 9;
   } else if (state == 3) {
     var succes = setTimeout(function() {
