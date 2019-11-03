@@ -42,18 +42,15 @@ function changeState(state) {
         }, 1000);
         //document.getElementById("countdown").innerHTML = 9;
     } else if (state == 3) {
-        changeState(4);
-        /*
-    var succes = setTimeout(function() {
-      var randomNumber = Math.round(Math.random() * 10);
-      console.log("Random Number: " + randomNumber);
+        var succes = setTimeout(function() {
+            var randomNumber = Math.round(Math.random() * 10);
+            console.log("Random Number: " + randomNumber);
 
-      if (randomNumber > 5) {
-        changeState(4);
-      } else {
-        changeState(5);
-      }
-    }, 2000);
-    */
+            if (randomNumber > 5) {
+                changeState(4);
+            } else {
+                changeState(5);
+            }
+        }, 2000);
     }
 }
