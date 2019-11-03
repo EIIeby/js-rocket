@@ -1,77 +1,77 @@
 body {
-  font-family: "helvetica", "arial", sans-serif;
+    font-family: "helvetica", "arial", sans-serif;
 }
 
 .left {
-  background-color: aquamarine;
-  position: fixed;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  left: 0;
+    background-color: white;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .interface {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 25%;
 }
 
 .right {
-  background-color: whitesmoke;
-  position: fixed;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  right: 0;
+    background-color: whitesmoke;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
 }
 
 .ground {
-  position: absolute;
-  background-color: black;
-  bottom: 20px;
-  left: 0;
-  width: 80%;
-  margin-left: 10%;
-  height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 20px;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
 }
 
 .nervous {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: url("../img/nervous.png") no-repeat 0 0;
-  width: 126px;
-  height: 108px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../img/nervous.png") no-repeat 0 0;
+    width: 126px;
+    height: 108px;
 }
 
 .rocket {
-  position: absolute;
-  left: 50%;
-  bottom: -34px;
-  width: 235px;
-  height: 275px;
-  margin-left: -117.5px;
-  background: url("../img/state1.png") no-repeat 0, 0;
-  transition: bottom 10000ms;
+    position: absolute;
+    left: 50%;
+    bottom: -34px;
+    width: 235px;
+    height: 275px;
+    margin-left: -117.5px;
+    background: url("../img/state1.png") no-repeat 0, 0;
+    transition: bottom 10000ms;
 }
 
 body.body-state1 .rocket {
-  transition: none;
+    transition: none;
 }
 
 /* rocket bg image*/
 body.body-state3 .rocket,
 body.body-state4 .rocket {
-  background-image: url("../img/state3.png");
+    background-image: url("../img/state3.png");
 }
 
 body.body-state5 .rocket {
-  background-image: url("../img/state5.png");
+    background-image: url("../img/state5.png");
 }
 
 body.body-state3 .rocket,
 body.body-state4 .rocket {
-  bottom: 1000px;
+    bottom: 1000px;
 }
 
 .state1,
@@ -79,39 +79,39 @@ body.body-state4 .rocket {
 .state3,
 .state4,
 .state5 {
-  display: none;
+    display: none;
 }
 
 body.body-state1 .state1 {
-  display: block;
+    display: block;
 }
 body.body-state2 .state2 {
-  display: block;
+    display: block;
 }
 body.body-state3 .state3 {
-  display: block;
+    display: block;
 }
 body.body-state4 .state4 {
-  display: block;
+    display: block;
 }
 body.body-state5 .state5 {
-  display: block;
+    display: block;
 }
 
 a {
 }
 
 a.button {
-  display: inline-block;
-  background-color: white;
-  color: black;
-  padding: 15px 40px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: color 300ms;
+    display: inline-block;
+    background-color: aquamarine;
+    color: black;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: color 300ms;
 }
 
 a:hover {
-  background-color: lightgray;
+    background-color: lightgray;
 }

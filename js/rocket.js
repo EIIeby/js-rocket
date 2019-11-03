@@ -18,30 +18,32 @@ var timer = null;
 var countDownNumber = 10;
 
 function changeState(state) {
-  document.body.className = "body-state" + state;
-  clearInterval(timer);
-  countDownNumber = 10;
-  document.getElementById("countdown").innerHTML = countDownNumber;
+    document.body.className = "body-state" + state;
+    clearInterval(timer);
+    countDownNumber = 10;
+    document.getElementById("countdown").innerHTML = countDownNumber;
 
-  if (state == 2) {
-    timer = setInterval(function() {
-      countDownNumber = countDownNumber - 1;
-      document.getElementById("countdown").innerHTML = countDownNumber;
+    if (state == 2) {
+        timer = setInterval(function() {
+            countDownNumber = countDownNumber - 1;
+            document.getElementById("countdown").innerHTML = countDownNumber;
 
-      if (countDownNumber == 5) {
-        //nerveous
-      }
+            if (countDownNumber == 5) {
+                //nerveous
+            }
 
-      if (countDownNumber == 2) {
-        //excited
-      }
+            if (countDownNumber == 2) {
+                //excited
+            }
 
-      if (countDownNumber <= 0) {
-        changeState(3);
-      }
-    }, 1000);
-    //document.getElementById("countdown").innerHTML = 9;
-  } else if (state == 3) {
+            if (countDownNumber <= 0) {
+                changeState(3);
+            }
+        }, 1000);
+        //document.getElementById("countdown").innerHTML = 9;
+    } else if (state == 3) {
+        changeState(4);
+        /*
     var succes = setTimeout(function() {
       var randomNumber = Math.round(Math.random() * 10);
       console.log("Random Number: " + randomNumber);
@@ -52,5 +54,6 @@ function changeState(state) {
         changeState(5);
       }
     }, 2000);
-  }
+    */
+    }
 }
